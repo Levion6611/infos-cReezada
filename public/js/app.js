@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const res = await fetch('https://infos-creezada.onrender.com/api/progress', {
           headers: {
-          'x-api-key': 'xAI&%%$#s@09IOj56$.>#,^55trRRxAi'
+          'x-api-key': 'infos-cReezada,future_is_real&'
         }
       });
         const data = await res.json();
