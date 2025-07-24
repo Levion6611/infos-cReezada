@@ -372,6 +372,7 @@ body {
 .menu-row .bar {
   width: 22px;
   height: 3px;
+  margin-bottom: 3px;
   background-color: #333;
   border-radius: 2px;
 }
