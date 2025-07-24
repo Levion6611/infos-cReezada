@@ -282,6 +282,7 @@ body {
   }
   .toggle-btn {
     padding: 8px 16px;
+    margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 20px;
     background: white;
