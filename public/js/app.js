@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     (async () => {
       try {
         const res = await fetch('https://infos-creezada.onrender.com/api/progress', {
-  headers: {
-    'x-api-key': 'xAI&%%$#s@09IOj56$$bvc.>#,^55trRRxAi'
-  }
-});
+          headers: {
+          'x-api-key': 'xAI&%%$#s@09IOj56$$bvc.>#,^55trRRxAi'
+      }
+    });
         const data = await res.json();
         const latest = data[data.length - 1];
         renderCharts(latest);
