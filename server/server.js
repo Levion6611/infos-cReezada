@@ -13,6 +13,14 @@ app.use(express.json());
 // Après app.use(express.json());
 const API_KEY = process.env.API_KEY || "xAI&%%$#s@09IOj56$$bvc.>#,^55trRRxAi";
 
+app.use('/api/progress', (req, res, next) => {
+  const apiKey = req.headers['x-api-key'];
+  if (!apiKey || apiKey !== process.env.API_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  next();
+});
+
 app.get('/api/progress', async (req, res) => {
   if(req.headers['x-api-key'] !== API_KEY) {
     return res.status(401).json({ error: "Unauthorized" });
