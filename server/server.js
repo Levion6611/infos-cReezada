@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Après app.use(express.json());
-const API_KEY = process.env.API_KEY || "xAI&%%$#s@09IOj56$$bvc.>#,^55trRRxAi";
+const API_KEY = process.env.API_KEY || "xAI&%%$#s@09IOj56$.>#,^55trRRxAi";
 
 app.use('/api/progress', (req, res, next) => {
   const apiKey = req.headers['x-api-key'];
@@ -45,13 +45,6 @@ async function connectDB() {
     process.exit(1);
   }
 }
-
-// Route API
-app.get('/api/progress', async (req, res) => {
-  const collection = await connectDB();
-  const progressData = await collection.find({}).toArray();
-  res.json(progressData);
-});
 
 // Démarrer le serveur
 app.listen(port, () => {
