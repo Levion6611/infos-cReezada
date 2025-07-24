@@ -1,0 +1,40 @@
+.book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2000px;
+    padding: 60px;
+  }
+  
+  .book-page {
+    width: 50%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    transform-origin: center;
+    transition: transform 0.5s ease;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Page de gauche */
+  .book-page.left {
+    transform: perspective(300px) rotateY(20deg) scaleX(0.95);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  /* Page de droite */
+  .book-page.right {
+    transform: perspective(300px) rotateY(-20deg) scaleX(0.95);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  /* Optionnel : Hover pour renforcer l'effet */
+  .book-page:hover {
+    transform: perspective(1000px) rotateY(0deg) scaleX(1);
+    z-index: 10;
+  }
+  

@@ -1,0 +1,75 @@
+.card-stack-container {
+    position: relative;
+    width: 100%; /* largeur totale container, ajustable */
+    height: 100%; /* hauteur adaptée au contenu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px; /* optionnel pour effet léger 3D */
+  }
+  
+  /* Style général des cartes */
+  img.card {
+    position: relative;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow:
+      0 8px 16px rgba(0,0,0,0.3),
+      0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Carte 1 : plus grande, positionnée en haut */
+  img.card-large {
+    width: 80%;
+    height: 50%;
+    top: 5%;
+    left: 10px;
+    z-index: 2;
+    transform: rotate(-4deg);
+  }
+  
+  /* Carte 2 : plus petite, en dessous et décalée */
+  img.card-small {
+    position: absolute;
+    width: 220px;
+    height: 140px;
+    top: 10%;
+    left: 20px;
+    z-index: 1;
+    transform: rotate(6deg);
+  }
+  
+  /* Option : effet hover pour mettre en avant la carte survolée */
+  img.card:hover {
+    box-shadow:
+      0 12px 24px rgba(43, 42, 42, 0.5),
+      0 8px 12px rgba(0,0,0,0.4);
+    transform: scale(1.05) rotate(0deg);
+    z-index: 10 !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+@media (max-width: 900px) {
+  .card-stack-container {
+    min-height: 300px;
+    height: 100%; 
+  }
+
+  img.card-large {
+    width: 40%;
+    height: 200px;
+    top: 0;
+    left: 25%;
+  }
+
+  img.card-small {
+    position: absolute;
+    width: 220px;
+    height: 140px;
+    top: 10%;
+    left: 20px;
+  }
+}
+  

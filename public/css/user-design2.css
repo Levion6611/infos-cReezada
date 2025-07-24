@@ -1,0 +1,58 @@
+/* Design personnalisé pour le post 2 "for user" */
+.slide.user-design2 .slide-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Image 1 : homme allongé */
+  .slide.user-design2 .slide-img .base-img {
+    width: 70%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Image 2 : téléphone */
+  .slide.user-design2 .slide-img .overlay-img {
+    position: absolute;
+    top: 50px;
+    right: 12px;
+    width: 90px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    z-index: 2;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 900px) {
+    .slide.user-design2 .slide-img {
+      height: 300px;
+    }
+
+    /* Image 1 : homme allongé */
+  .slide.user-design2 .slide-img .base-img {
+    width: 75%;
+    height: 65%;
+  }
+  
+  /* Image 2 : téléphone */
+  .slide.user-design2 .slide-img .overlay-img {
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 140px;
+  }
+}
+  

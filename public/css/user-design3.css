@@ -1,0 +1,61 @@
+.message-animation-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.msg {
+  background: white;
+  border-radius: 18px;
+  padding: 14px 18px;
+  margin: 10px 10px;
+  max-width: 80%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  position: relative;
+  opacity: 0;
+  transform: translateY(100%);
+  animation-fill-mode: forwards;
+}
+
+/* Flèche style WhatsApp */
+.msg::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-right-color: white;
+}
+
+/* Ajout de l'animation */
+.user-design3.center .msg-1 {
+  animation: slideUp1 1s ease-out 0.5s forwards;
+}
+.user-design3.center .msg-2 {
+  animation: slideUp2 1s ease-out 2s forwards;
+}
+.user-design3.center .msg-3 {
+  animation: slideUp3 1s ease-out 3.5s forwards;
+}
+
+
+@keyframes slideUp1 {
+  0% { opacity: 0; transform: translateY(100%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp2 {
+  0% { opacity: 0; transform: translateY(100%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp3 {
+  0% { opacity: 0; transform: translateY(100%); }
+  100% { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,42 @@
+.vision-statement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px;
+}
+
+.quote {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  max-width: 800px;
+  color: #111;
+  position: relative;
+  line-height: 1.6;
+}
+
+.quote::before,
+.quote::after {
+  font-size: 4rem;
+  color: #888;
+  position: absolute;
+  font-family: Georgia, serif;
+}
+
+.quote::before {
+  content: "“";
+  left: -30px;
+  top: -30px;
+}
+
+.quote::after {
+  content: "”";
+  right: -30px;
+  bottom: -30px;
+}
+
+span {
+  padding: 20px;
+}
+
