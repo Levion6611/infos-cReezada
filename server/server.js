@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Après app.use(express.json());
-const API_KEY = process.env.API_KEY || "xAI&%%$#s@09IOj56$.>#,^55trRRxAi";
+const API_KEY = process.env.API_KEY || "infos-cReezada,future_is_real&";
 
 app.use('/api/progress', (req, res, next) => {
   const apiKey = req.headers['x-api-key'];
