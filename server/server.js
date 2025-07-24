@@ -10,6 +10,19 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
+// Après app.use(express.json());
+const API_KEY = process.env.API_KEY || "xAI&%%$#s@09IOj56$$bvc.>#,^55trRRxAi";
+
+app.get('/api/progress', async (req, res) => {
+  if(req.headers['x-api-key'] !== API_KEY) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  
+  const collection = await connectDB();
+  const progressData = await collection.find({}).toArray();
+  res.json(progressData);
+});
+
 // Connexion MongoDB
 const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
